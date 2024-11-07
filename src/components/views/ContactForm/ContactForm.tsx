@@ -57,7 +57,15 @@ const ContactForm = () => {
       >
         Only CTA on the page
       </Typography>
-      <Paper elevation={5} sx={{ padding: 4, backgroundColor: "primary.main" }}>
+      <Paper
+        elevation={5}
+        sx={{
+          padding: 4,
+          backgroundColor: "background.default",
+          border: "1px solid",
+          borderColor: "secondary.main",
+        }}
+      >
         <form
           onSubmit={handleSubmit(onSubmit)}
           style={{

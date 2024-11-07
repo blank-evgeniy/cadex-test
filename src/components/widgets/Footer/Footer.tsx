@@ -1,23 +1,28 @@
-import { Box, Typography } from "@mui/material";
+"use client";
+import { alpha, Box, styled, Typography } from "@mui/material";
+
+const StyledFooter = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  height: "40px",
+  width: "100%",
+  borderTop: `1px solid ${theme.palette.secondary.main}`,
+  backdropFilter: "blur(12px)",
+  backgroundColor: alpha(theme.palette.background.default, 0.4),
+  boxShadow: theme.palette.primary.main,
+  position: "fixed",
+  bottom: 0,
+}));
 
 const Footer = () => {
   return (
-    <Box
-      component="footer"
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "40px",
-        backgroundColor: "primary.main",
-
-        position: "sticky",
-        bottom: 0,
-      }}
-    >
-      <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-        Some Company 2024
-      </Typography>
+    <Box component={"footer"}>
+      <StyledFooter>
+        <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+          Some Company 2024
+        </Typography>
+      </StyledFooter>
     </Box>
   );
 };

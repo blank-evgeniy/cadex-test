@@ -30,13 +30,13 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#002642",
+      main: "#F2F2F2",
     },
     secondary: {
       main: "#CCFF00",
     },
     background: {
-      default: "#111",
+      default: "#333333",
       paper: "#141414",
     },
     text: {

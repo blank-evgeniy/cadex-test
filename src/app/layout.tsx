@@ -41,7 +41,7 @@ export default function RootLayout({
               <Header />
               <Box
                 component="main"
-                sx={{ flex: 1, px: 2, backgroundColor: "background.default" }}
+                sx={{ flex: 1, backgroundColor: "background.default" }}
               >
                 {children}
               </Box>

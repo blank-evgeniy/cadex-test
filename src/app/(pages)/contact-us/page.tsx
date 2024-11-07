@@ -10,13 +10,15 @@ const ContacUs = () => {
   return (
     <Box
       sx={{
-        minHeight: "calc(100vh - 60px - 40px)",
-        py: 2,
+        backgroundColor: "background.paper",
+        minHeight: "100vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
         gap: 4,
+        pt: 12,
+        pb: 8,
       }}
     >
       <ContactForm />
