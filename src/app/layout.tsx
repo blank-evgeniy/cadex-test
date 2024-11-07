@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import Header from "@/components/widgets/Header/Header";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
@@ -8,10 +7,18 @@ import theme from "./config/theme";
 import "./globals.css";
 import Footer from "@/components/widgets/Footer/Footer";
 import { Box } from "@mui/material";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Some Copmany",
   description: "Some Company is...",
+  openGraph: {
+    title: "Some Copmanyasdas",
+    type: "website",
+  },
+  twitter: {
+    title: "Some Copmany",
+  },
 };
 
 const roboto = Roboto({
