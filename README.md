@@ -1,6 +1,6 @@
 # Test Task for CadExchanger
 
-## There is a ready deployment of the website: [[link](https://cadex-test-puce.vercel.app/)]
+## There is a ready deployment of the website: [[deploy_link](https://cadex-test-puce.vercel.app/)]
 
 ## Or to run the website locally:
 
@@ -14,13 +14,13 @@
 
 or
 
-5. Build the website: npm run build.
+5. Build the website: `npm run build`.
 
-6. Run the built website: npm run start.
+6. Run the built website: `npm run start`.
 
 ## Used design, SEO, and performance strategies:
 
-- A combination of boxShadow for a glowing effect and backdropFilter: blur() for a blurring effect was used for a beautiful original design.
+- A combination of `boxShadow` for a glowing effect and `backdropFilter: blur()` for a blurring effect was used for a beautiful original design.
 
 - Semantic markup was implemented: using tags such as h, header, footer, main, section, and article.
 
