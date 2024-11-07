@@ -1,13 +1,42 @@
 "use client";
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { TextField, Button, Typography, Paper } from "@mui/material";
+import { TextField, Button, Typography, Paper, styled } from "@mui/material";
 
 interface IFormInput {
   name: string;
   email: string;
   message: string;
 }
+
+const StyledTextField = styled(TextField)(({ theme }) => ({
+  position: "relative",
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": {
+      borderColor: theme.palette.grey[400],
+      transition: "border-color 0.3s ease",
+    },
+    "&:hover fieldset": {
+      borderColor: theme.palette.grey[200],
+    },
+    "&.Mui-focused fieldset": {
+      borderColor: theme.palette.secondary.main,
+      boxShadow: `0 0 4px ${theme.palette.secondary.light}`,
+    },
+    "&.Mui-error fieldset": {
+      borderColor: theme.palette.error.main,
+      boxShadow: `0 0 4px ${theme.palette.error.light}`,
+    },
+  },
+  "& .MuiInputBase-input": {
+    color: theme.palette.text.primary,
+    borderRadius: "4px",
+  },
+  "& .MuiInputBase-input::placeholder": {
+    color: theme.palette.text.secondary,
+    opacity: 0.7,
+  },
+}));
 
 const ContactForm = () => {
   const {
@@ -75,7 +104,7 @@ const ContactForm = () => {
             margin: "0 auto",
           }}
         >
-          <TextField
+          <StyledTextField
             label="Name"
             variant="outlined"
             color="secondary"
@@ -85,7 +114,7 @@ const ContactForm = () => {
             margin="normal"
           />
 
-          <TextField
+          <StyledTextField
             label="Email"
             variant="outlined"
             color="secondary"
@@ -101,7 +130,7 @@ const ContactForm = () => {
             margin="normal"
           />
 
-          <TextField
+          <StyledTextField
             label="Message"
             variant="outlined"
             color="secondary"
