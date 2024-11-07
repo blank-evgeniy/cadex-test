@@ -100,8 +100,7 @@ const ContactForm = () => {
           border: "1px solid",
           borderColor: "secondary.main",
           backgroundColor: alpha("#1a1a1a", 0.6),
-          backdropFilter: "blur(12px)",
-          borderBottom: "1px solid #CCFF00",
+          backdropFilter: "blur(6px)",
         }}
       >
         <form

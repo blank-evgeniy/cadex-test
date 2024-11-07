@@ -1,6 +1,7 @@
 "use client";
 import { createTheme } from "@mui/material/styles";
 
+//mui theme config
 const theme = createTheme({
   typography: {
     allVariants: {

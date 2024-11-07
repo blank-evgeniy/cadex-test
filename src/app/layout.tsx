@@ -13,12 +13,27 @@ import Background from "@/components/widgets/Background/Background";
 export const metadata: Metadata = {
   title: "Some Copmany",
   description: "Some Company is...",
+  keywords: ["company", "never gonna give you ap"],
+  //Open Graph metadata
   openGraph: {
-    title: "Some Copmanyasdas",
+    title: "Some Copmany",
+    description: "Some Company...",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1543946602-04a58819ec2c?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+    ],
     type: "website",
   },
+  //Twitter metadata
   twitter: {
     title: "Some Copmany",
+    description: "Some Company...",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1543946602-04a58819ec2c?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+    ],
   },
 };
 
@@ -39,19 +54,11 @@ export default function RootLayout({
       <body className={roboto.variable}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                minHeight: "100vh",
-              }}
-            >
-              <Header />
-              <Box component="main" sx={{ flex: 1 }}>
-                {children}
-              </Box>
-              <Footer />
+            <Header />
+            <Box component="main" sx={{ flex: 1 }}>
+              {children}
             </Box>
+            <Footer />
             <Background />
           </ThemeProvider>
         </AppRouterCacheProvider>

@@ -7,22 +7,23 @@ import React from "react";
 
 const animate = keyframes`
     0% {
-        transform: translateY(100vh) scale(0);
+        transform: translateX(-10vw) scale(0);
 
-    }
+    },
+  
     100% {
-        transform: translateY(-20vh) scale(1);
+        transform: translateX(110vw) scale(1);
     }
 `;
 
 const Bubble = styled.span`
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background: #ccff00;
   border-radius: 100%;
-  box-shadow: 0 0 10px #ccff0044, 0 0 50px #ccff00, 0 0 100px #ccff00;
-  animation: ${animate} 15s linear infinite;
+  box-shadow: 0 0 4px #ccff0044, 0 0 50px #ccff00, 0 0 100px #ccff00;
+  animation: ${animate} 1s linear infinite;
 `;
 
 const Background = () => {
@@ -43,25 +44,23 @@ const Background = () => {
           position: "relative",
           display: "flex",
           justifyContent: "space-between",
+          flexDirection: "column",
+          height: "100%",
         }}
       >
-        <Bubble style={{ animationDuration: "2s" }} />
-        <Bubble style={{ animationDuration: "3s" }} />
-        <Bubble style={{ animationDuration: "2.5s" }} />
-        <Bubble style={{ animationDuration: "2s" }} />
-        <Bubble style={{ animationDuration: "3.5s" }} />
-        <Bubble style={{ animationDuration: "3s" }} />
-        <Bubble style={{ animationDuration: "2s" }} />
-        <Bubble style={{ animationDuration: "1.5s" }} />
         <Bubble style={{ animationDuration: "4s" }} />
-        <Bubble style={{ animationDuration: "3.5s" }} />
-        <Bubble style={{ animationDuration: "2.5s" }} />
-        <Bubble style={{ animationDuration: "2s" }} />
-        <Bubble style={{ animationDuration: "3s" }} />
-        <Bubble style={{ animationDuration: "4s" }} />
-        <Bubble style={{ animationDuration: "5s" }} />
-        <Bubble style={{ animationDuration: "4.5s" }} />
-        <Bubble style={{ animationDuration: "2.5s" }} />
+        <Bubble style={{ animationDuration: "6s" }} />
+        <Bubble style={{ animationDuration: "7.5s" }} />
+        <Bubble style={{ animationDuration: "3.2s" }} />
+        <Bubble style={{ animationDuration: "9.5s" }} />
+        <Bubble style={{ animationDuration: "6.3s" }} />
+        <Bubble style={{ animationDuration: "8.7s" }} />
+        <Bubble style={{ animationDuration: "5.5s" }} />
+        <Bubble style={{ animationDuration: "7.5s" }} />
+        <Bubble style={{ animationDuration: "9.5s" }} />
+        <Bubble style={{ animationDuration: "6.4s" }} />
+        <Bubble style={{ animationDuration: "7.8s" }} />
+        <Bubble style={{ animationDuration: "8.1s" }} />
       </Box>
     </Box>
   );

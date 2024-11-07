@@ -10,6 +10,7 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import { routes } from "@/app/config/routes";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
@@ -40,11 +41,11 @@ const Header = () => {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            <Link component={NextLink} href="/">
+            <Link component={NextLink} href={routes.PUBLIC.HOME}>
               Some Company
             </Link>
           </Typography>
-          <AppLink size="small" href="/contact-us">
+          <AppLink size="small" href={routes.PUBLIC.CONTACT_US}>
             Contact us
           </AppLink>
         </StyledToolbar>

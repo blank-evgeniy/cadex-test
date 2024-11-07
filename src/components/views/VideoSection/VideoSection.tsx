@@ -1,5 +1,5 @@
 "use client";
-import { Box, Container, Grid2, Typography } from "@mui/material";
+import { alpha, Box, Container, Grid2, Paper, Typography } from "@mui/material";
 import YouTubeVideo from "../../widgets/YouTubeVideo/YouTubeVideo";
 
 const VideoSection = () => {
@@ -14,15 +14,24 @@ const VideoSection = () => {
       <Container>
         <Grid2 container spacing={4} sx={{ alignItems: "center" }}>
           <Grid2 size={{ xs: 12, md: 6 }}>
-            <Typography variant="h1">
-              Most important title on the page
-            </Typography>
-            <Typography sx={{ pt: 2 }}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
-              rerum deserunt illo alias dolorem. Molestiae odio fugiat dolore
-              doloremque facilis officia unde magni voluptate commodi incidunt
-              repellendus laborum, illo perferendis!
-            </Typography>
+            <Paper
+              elevation={8}
+              sx={{
+                padding: 4,
+                backgroundColor: alpha("#222", 0.6),
+                backdropFilter: "blur(6px)",
+              }}
+            >
+              <Typography variant="h1">
+                Most important title on the page
+              </Typography>
+              <Typography sx={{ pt: 2 }}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
+                rerum deserunt illo alias dolorem. Molestiae odio fugiat dolore
+                doloremque facilis officia unde magni voluptate commodi incidunt
+                repellendus laborum, illo perferendis!
+              </Typography>
+            </Paper>
           </Grid2>
 
           <Grid2

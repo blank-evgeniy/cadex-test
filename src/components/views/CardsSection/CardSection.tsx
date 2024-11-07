@@ -2,6 +2,7 @@ import AppLink from "@/components/shared/AppLink/AppLink";
 import { alpha, Box, Container, Grid2, Typography } from "@mui/material";
 import { Cards } from "./data/cards";
 import Card from "./Card";
+import { routes } from "@/app/config/routes";
 
 const CardSection = () => {
   return (
@@ -9,7 +10,7 @@ const CardSection = () => {
       component={"section"}
       sx={{
         backgroundColor: alpha("#1a1a1a", 0.6),
-        backdropFilter: "blur(12px)",
+        backdropFilter: "blur(6px)",
         borderBottom: "1px solid #CCFF00",
         py: 8,
       }}
@@ -25,7 +26,7 @@ const CardSection = () => {
           ))}
         </Grid2>
         <Box sx={{ display: "flex", justifyContent: "center", pt: 8 }}>
-          <AppLink href="/contact-us">Contact us</AppLink>
+          <AppLink href={routes.PUBLIC.CONTACT_US}>Contact us</AppLink>
         </Box>
       </Container>
     </Box>

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 
+//next server function
 export async function POST(request: Request) {
   const { name }: { name?: string } = await request.json();
 
