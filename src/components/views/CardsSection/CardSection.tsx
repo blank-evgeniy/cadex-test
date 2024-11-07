@@ -1,5 +1,5 @@
 import AppLink from "@/components/shared/AppLink/AppLink";
-import { Box, Container, Grid2, Typography } from "@mui/material";
+import { alpha, Box, Container, Grid2, Typography } from "@mui/material";
 import { Cards } from "./data/cards";
 import Card from "./Card";
 
@@ -8,7 +8,8 @@ const CardSection = () => {
     <Box
       component={"section"}
       sx={{
-        backgroundColor: "#1a1a1a",
+        backgroundColor: alpha("#1a1a1a", 0.6),
+        backdropFilter: "blur(12px)",
         borderBottom: "1px solid #CCFF00",
         py: 8,
       }}

@@ -1,7 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { TextField, Button, Typography, Paper, styled } from "@mui/material";
+import {
+  TextField,
+  Button,
+  Typography,
+  Paper,
+  styled,
+  alpha,
+} from "@mui/material";
 
 interface IFormInput {
   name: string;
@@ -90,9 +97,11 @@ const ContactForm = () => {
         elevation={5}
         sx={{
           padding: 4,
-          backgroundColor: "background.default",
           border: "1px solid",
           borderColor: "secondary.main",
+          backgroundColor: alpha("#1a1a1a", 0.6),
+          backdropFilter: "blur(12px)",
+          borderBottom: "1px solid #CCFF00",
         }}
       >
         <form

@@ -7,7 +7,7 @@ const VideoSection = () => {
     <Box
       component={"section"}
       sx={{
-        py: { xs: 8, md: 16 },
+        py: { xs: 10, md: 16 },
         borderBottom: "1px solid #CCFF00",
       }}
     >

@@ -10,7 +10,6 @@ const ContacUs = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "background.paper",
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",

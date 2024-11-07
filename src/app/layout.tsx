@@ -8,6 +8,7 @@ import "./globals.css";
 import Footer from "@/components/widgets/Footer/Footer";
 import { Box } from "@mui/material";
 import { Metadata } from "next";
+import Background from "@/components/widgets/Background/Background";
 
 export const metadata: Metadata = {
   title: "Some Copmany",
@@ -46,14 +47,12 @@ export default function RootLayout({
               }}
             >
               <Header />
-              <Box
-                component="main"
-                sx={{ flex: 1, backgroundColor: "background.default" }}
-              >
+              <Box component="main" sx={{ flex: 1 }}>
                 {children}
               </Box>
               <Footer />
             </Box>
+            <Background />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
